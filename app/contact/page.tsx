@@ -9,16 +9,23 @@ export default function ContactPage() {
       <Header />
 
       {/* Hero */}
-      <div className="pt-16 bg-primary/5">
+      <div
+        className="pt-20"
+        style={{
+          backgroundColor: '#4F5F52',
+          backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='90' height='90'><polygon points='45,3 87,45 45,87 3,45' fill='none' stroke='rgba(255,255,255,0.12)' stroke-width='0.6'/><circle cx='45' cy='45' r='9' fill='none' stroke='rgba(255,255,255,0.14)' stroke-width='0.6'/><circle cx='45' cy='45' r='4' fill='none' stroke='rgba(255,255,255,0.14)' stroke-width='0.6'/><circle cx='45' cy='45' r='1.5' fill='rgba(255,255,255,0.18)'/><line x1='45' y1='36' x2='45' y2='3' stroke='rgba(255,255,255,0.07)' stroke-width='0.5'/><line x1='45' y1='54' x2='45' y2='87' stroke='rgba(255,255,255,0.07)' stroke-width='0.5'/><line x1='36' y1='45' x2='3' y2='45' stroke='rgba(255,255,255,0.07)' stroke-width='0.5'/><line x1='54' y1='45' x2='87' y2='45' stroke='rgba(255,255,255,0.07)' stroke-width='0.5'/><circle cx='45' cy='3' r='2' fill='rgba(255,255,255,0.12)'/><circle cx='45' cy='87' r='2' fill='rgba(255,255,255,0.12)'/><circle cx='3' cy='45' r='2' fill='rgba(255,255,255,0.12)'/><circle cx='87' cy='45' r='2' fill='rgba(255,255,255,0.12)'/></svg>`)}") `,
+          backgroundRepeat: 'repeat',
+        }}
+      >
         <div className="container mx-auto px-4 max-w-6xl py-20 text-center">
-          <span className="text-xs tracking-[0.4em] uppercase text-primary/60 font-medium">Get In Touch</span>
-          <h1 className="mt-3 text-5xl md:text-6xl font-serif text-primary font-bold uppercase">Contact Us</h1>
+          <span className="text-xs tracking-[0.4em] uppercase font-medium" style={{ color: 'rgba(255,255,255,0.6)' }}>Get In Touch</span>
+          <h1 className="mt-3 text-4xl sm:text-5xl md:text-6xl font-serif font-bold uppercase" style={{ color: '#bb9151' }}>Contact Us</h1>
           <div className="flex items-center justify-center gap-3 mt-5">
-            <div className="h-px w-12 bg-primary/30" />
-            <span className="text-primary opacity-40 text-xl">✤</span>
-            <div className="h-px w-12 bg-primary/30" />
+            <div className="h-px w-12" style={{ backgroundColor: 'rgba(255,255,255,0.3)' }} />
+            <span className="text-xl" style={{ color: 'rgba(255,255,255,0.5)' }}>✤</span>
+            <div className="h-px w-12" style={{ backgroundColor: 'rgba(255,255,255,0.3)' }} />
           </div>
-          <p className="mt-5 text-foreground/55 text-base max-w-lg mx-auto">
+          <p className="mt-5 text-base max-w-lg mx-auto" style={{ color: 'rgba(255,255,255,0.7)' }}>
             We'd love to hear from you. Reach out to us for bookings, enquiries, or just to say hello.
           </p>
         </div>
