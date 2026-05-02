@@ -5,7 +5,7 @@ export default function TeamContent() {
     {
       name: 'SINDHI MAHARANI SHETTI',
       title: 'Groom\'s Mom, 2023',
-      quote: 'A tremendously organized and professional event left a lasting impression. We have experienced one exceptional event, and that''s what we booked for again and again and again. Imagination is what impressed us''s on the premium and had language and attention to detail left us awestruck. We would not hesitate to recommend them for our friend''s event.'
+      quote: 'A tremendously organized and professional event left a lasting impression. We have experienced one exceptional event, and that\'s what we booked for again and again and again. Imagination is what impressed us on the premium and had language and attention to detail left us awestruck. We would not hesitate to recommend them for our friend\'s event.'
     },
     {
       name: 'KRISHNA BHAGWAN',
