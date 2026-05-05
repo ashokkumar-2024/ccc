@@ -22,7 +22,7 @@ const bgPatternSvg = encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg'
 export default function CTA() {
   return (
     <section
-      className="py-20 text-white"
+      className="py-20"
       style={{
         backgroundColor: '#4F5F52',
         backgroundImage: `url("data:image/svg+xml,${bgPatternSvg}")`,
@@ -44,7 +44,7 @@ export default function CTA() {
             <Input placeholder="Phone" className="bg-white text-foreground border-0" />
             <Textarea placeholder="Tell us about your event" className="bg-white text-foreground border-0 min-h-32" />
             <div className="flex justify-center">
-              <Button className="bg-white hover:bg-background border border-white" style={{ color: '#4F5F52' }}>
+              <Button className="hover:opacity-90 transition border-0" style={{ backgroundColor: '#bb9151', color: '#fff' }}>
                 SEND INQUIRY
               </Button>
             </div>

@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
+import EnquiryModal from '@/components/EnquiryModal'
 
 const KalindiIcon = () => (
   <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12 mx-auto">
@@ -107,7 +108,7 @@ export default function ServicesGrid() {
   const bottomRow = services.slice(4)
 
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
+    <section className="py-20 bg-white relative overflow-hidden">
       <Image src="/topLeft.png" alt="" width={200} height={200} className="absolute top-0 left-0 pointer-events-none opacity-40" />
       <Image src="/topRight.png" alt="" width={200} height={200} className="absolute top-0 right-0 pointer-events-none opacity-40" />
 
@@ -178,9 +179,19 @@ function ServiceCard({ Icon, name, desc }: { Icon: () => React.ReactElement; nam
       <p className="text-primary font-bold text-base tracking-widest uppercase">{name}</p>
       <p className="text-foreground/50 text-xs leading-relaxed">{desc}</p>
 
-      <span className="text-primary/50 group-hover:text-primary group-hover:translate-x-1 transition-all text-sm mt-1 inline-block">
-        Explore →
-      </span>
+      <EnquiryModal
+        trigger={(openModal) => (
+          <button
+            onClick={openModal}
+            className="mt-1 text-xs tracking-widest uppercase font-semibold border px-4 py-2 transition-all duration-300"
+            style={{ borderColor: '#bb9151', color: '#bb9151' }}
+            onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#bb9151'; e.currentTarget.style.color = '#fff' }}
+            onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#bb9151' }}
+          >
+            Enquire Now
+          </button>
+        )}
+      />
     </div>
   )
 }

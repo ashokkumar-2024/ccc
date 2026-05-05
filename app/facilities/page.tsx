@@ -166,7 +166,7 @@ export default function FacilitiesPage() {
       </div>
 
       {/* Intro + Occasions */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
@@ -232,7 +232,7 @@ export default function FacilitiesPage() {
       </section>
 
       {/* Gallery */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
             <span className="text-xs tracking-[0.3em] uppercase text-primary/60 font-medium">A Glimpse</span>

@@ -16,13 +16,13 @@ const row2 = [
 
 export default function Gallery() {
   return (
-    <section className="py-16 bg-background overflow-hidden">
+    <section className="py-16 bg-white overflow-hidden">
       <div className="text-center mb-8 md:mb-10 px-4">
         <div className="flex justify-center opacity-60 mb-3">
           <span className="text-primary text-2xl md:text-3xl">✤</span>
         </div>
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary uppercase mb-3">
-          A Glimpse of Nature Knots
+          A Glimpse of CHAITANYA
         </h2>
         <p className="text-foreground/60 text-sm sm:text-base md:text-lg">
           Where every corner tells a story of luxury, nature, and unforgettable moments.

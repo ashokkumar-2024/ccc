@@ -2,7 +2,7 @@
 
 export default function LocationSection() {
   return (
-    <section className="py-12 md:py-20 bg-background">
+    <section className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-8 md:mb-12">
           <span className="text-xs tracking-[0.3em] uppercase text-primary/60 font-medium">Find Us</span>

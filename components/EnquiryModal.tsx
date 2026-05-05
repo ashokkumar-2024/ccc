@@ -2,20 +2,28 @@
 
 import { useState } from 'react'
 
-export default function EnquiryModal() {
+interface Props {
+  trigger?: (open: () => void) => React.ReactNode
+}
+
+export default function EnquiryModal({ trigger }: Props = {}) {
   const [open, setOpen] = useState(false)
+
+  const defaultTrigger = (
+    <button
+      onClick={() => setOpen(true)}
+      className="text-xs tracking-widest uppercase font-semibold border px-4 py-2 transition-colors"
+      style={{ borderColor: '#ffffff', color: '#ffffff' }}
+      onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#bb9151'; e.currentTarget.style.borderColor = '#bb9151'; e.currentTarget.style.color = '#ffffff' }}
+      onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.borderColor = '#ffffff'; e.currentTarget.style.color = '#ffffff' }}
+    >
+      ENQUIRE NOW
+    </button>
+  )
 
   return (
     <>
-      <button
-        onClick={() => setOpen(true)}
-        className="text-xs tracking-widest uppercase font-semibold border px-4 py-2 transition-colors"
-        style={{ borderColor: '#ffffff', color: '#ffffff' }}
-        onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#ffffff'; e.currentTarget.style.color = '#829180' }}
-        onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#ffffff' }}
-      >
-        SEND AN ENQUIRY
-      </button>
+      {trigger ? trigger(() => setOpen(true)) : defaultTrigger}
 
       {open && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
@@ -27,8 +35,8 @@ export default function EnquiryModal() {
             {/* Close */}
             <button
               onClick={() => setOpen(false)}
-              className="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center text-foreground/40 hover:text-foreground transition"
-              style={{ backgroundColor: '#cfb488' }}
+              className="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold transition"
+              style={{ backgroundColor: '#4F5F52' }}
             >
               ✕
             </button>
@@ -89,7 +97,7 @@ export default function EnquiryModal() {
               <button
                 type="submit"
                 className="w-full py-3.5 rounded-xl text-sm font-semibold tracking-[0.2em] uppercase text-white transition-colors"
-                style={{ backgroundColor: '#4F5F52' }}
+                style={{ backgroundColor: '#bb9151' }}
               >
                 Send Enquiry
               </button>

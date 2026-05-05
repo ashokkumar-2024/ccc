@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function Canvas() {
   return (
-    <section className="py-12 md:py-16 bg-background relative overflow-hidden">
+    <section className="py-12 md:py-16 bg-white relative overflow-hidden">
       <Image
         src="/topLeft.png"
         alt=""
@@ -27,7 +27,7 @@ export default function Canvas() {
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold font-serif text-primary uppercase leading-tight">
-            Nature&apos;s Canvas For Your Unforgettable Moments
+            Charming Canvas For Your Unforgettable Moments
           </h2>
 
           <p className="text-foreground/70 leading-relaxed text-sm sm:text-base md:text-lg px-2 sm:px-0">

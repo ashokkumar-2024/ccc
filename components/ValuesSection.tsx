@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect, useRef, useState } from 'react'
+
 const bgPatternSvg = encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='90' height='90'>
   <polygon points='45,3 87,45 45,87 3,45' fill='none' stroke='rgba(255,255,255,0.12)' stroke-width='0.6'/>
   <circle cx='45' cy='45' r='9' fill='none' stroke='rgba(255,255,255,0.14)' stroke-width='0.6'/>
@@ -65,23 +67,23 @@ const ButterflyIcon = () => (
 const values = [
   {
     Icon: MeditationIcon,
-    title: 'TRANQUIL LOCATION',
-    description: 'Immerse in serenity at our nature-inspired venue, where peaceful landscapes create the perfect backdrop for your special moments.',
-  },
-  {
-    Icon: EcoIcon,
-    title: 'ECO-FRIENDLY PRACTICES',
-    description: 'Celebrate sustainably in our eco-friendly venue, where luxury meets environmental responsibility.',
+    title: 'SEAMLESS EXPERIENCES',
+    description: 'From planning to execution, every detail flows effortlessly, ensuring your event feels smooth, stress-free, and perfectly orchestrated.',
   },
   {
     Icon: CrownIcon,
-    title: 'LUXURY & NATURAL SPLENDOR',
-    description: 'Enjoy refined elegance amidst breathtaking natural beauty for a truly memorable event experience.',
+    title: 'TIMELESS ELEGANCE',
+    description: 'A setting designed to never go out of style—where classic charm meets modern sophistication for unforgettable celebrations.',
+  },
+  {
+    Icon: EcoIcon,
+    title: 'SPACIOUS COMFORT',
+    description: 'Thoughtfully designed open spaces that offer freedom, comfort, and the perfect atmosphere for gatherings of any scale.',
   },
   {
     Icon: ButterflyIcon,
-    title: 'SANCTUARY VIBES',
-    description: 'Feel the embrace of nature at our sanctuary, where lush greenery and tranquil surroundings create a haven for your events.',
+    title: 'CURATED AMBIENCE',
+    description: 'Every corner crafted with intent—lighting, décor, and design come together to create a mood that elevates every moment.',
   },
 ]
 
@@ -97,8 +99,21 @@ function GoldCorners() {
 }
 
 export default function ValuesSection() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
+      { threshold: 0.15 }
+    )
+    if (sectionRef.current) observer.observe(sectionRef.current)
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section
+      ref={sectionRef}
       className="py-14 md:py-20 relative"
       style={{
         backgroundColor: '#4F5F52',
@@ -107,13 +122,31 @@ export default function ValuesSection() {
       }}
     >
       <div className="container mx-auto px-4 sm:px-6">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-10 md:mb-14 tracking-wide">
-          NURTURE • NATURE • CELEBRATION
-        </h2>
+        {/* Heading — fade + slide up */}
+        <div
+          className="text-center mb-10 md:mb-14 transition-all duration-700"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? 'translateY(0)' : 'translateY(32px)',
+          }}
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-wide uppercase">
+            Elite. Timeless. Celebratory
+          </h2>
+        </div>
 
+        {/* Cards — staggered pop-up */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-8 max-w-5xl mx-auto">
           {values.map(({ Icon, title, description }, index) => (
-            <div key={index} className="bg-white relative p-7 sm:p-8 md:p-10 text-center">
+            <div
+              key={index}
+              className="bg-white relative p-7 sm:p-8 md:p-10 text-center transition-all duration-700"
+              style={{
+                opacity: visible ? 1 : 0,
+                transform: visible ? 'translateY(0) scale(1)' : 'translateY(40px) scale(0.95)',
+                transitionDelay: visible ? `${index * 150}ms` : '0ms',
+              }}
+            >
               <GoldCorners />
               <div className="text-[#4F5F52] mb-4 md:mb-5">
                 <Icon />

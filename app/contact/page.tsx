@@ -32,7 +32,7 @@ export default function ContactPage() {
       </div>
 
       {/* Contact Info + Form */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
 
@@ -190,15 +190,22 @@ export default function ContactPage() {
       </section>
 
       {/* Google Map */}
-      <section className="bg-background pb-20">
+      <section
+        className="py-16 md:py-20"
+        style={{
+          backgroundColor: '#4F5F52',
+          backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='90' height='90'><polygon points='45,3 87,45 45,87 3,45' fill='none' stroke='rgba(255,255,255,0.12)' stroke-width='0.6'/><circle cx='45' cy='45' r='9' fill='none' stroke='rgba(255,255,255,0.14)' stroke-width='0.6'/><circle cx='45' cy='45' r='4' fill='none' stroke='rgba(255,255,255,0.14)' stroke-width='0.6'/><circle cx='45' cy='45' r='1.5' fill='rgba(255,255,255,0.18)'/><line x1='45' y1='36' x2='45' y2='3' stroke='rgba(255,255,255,0.07)' stroke-width='0.5'/><line x1='45' y1='54' x2='45' y2='87' stroke='rgba(255,255,255,0.07)' stroke-width='0.5'/><line x1='36' y1='45' x2='3' y2='45' stroke='rgba(255,255,255,0.07)' stroke-width='0.5'/><line x1='54' y1='45' x2='87' y2='45' stroke='rgba(255,255,255,0.07)' stroke-width='0.5'/><circle cx='45' cy='3' r='2' fill='rgba(255,255,255,0.12)'/><circle cx='45' cy='87' r='2' fill='rgba(255,255,255,0.12)'/><circle cx='3' cy='45' r='2' fill='rgba(255,255,255,0.12)'/><circle cx='87' cy='45' r='2' fill='rgba(255,255,255,0.12)'/></svg>`)}") `,
+          backgroundRepeat: 'repeat',
+        }}
+      >
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-10">
-            <span className="text-xs tracking-[0.3em] uppercase text-primary/60 font-medium">Find Us</span>
-            <h2 className="mt-3 text-4xl font-serif text-primary font-bold uppercase">Our Location</h2>
+            <span className="text-xs tracking-[0.3em] uppercase font-medium" style={{ color: 'rgba(255,255,255,0.6)' }}>Find Us</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-serif font-bold uppercase" style={{ color: '#bb9151' }}>Our Location</h2>
             <div className="flex items-center justify-center gap-3 mt-4">
-              <div className="h-px w-10 bg-primary/40" />
-              <span className="text-primary opacity-50">✤</span>
-              <div className="h-px w-10 bg-primary/40" />
+              <div className="h-px w-10" style={{ backgroundColor: 'rgba(255,255,255,0.3)' }} />
+              <span style={{ color: 'rgba(255,255,255,0.5)' }}>✤</span>
+              <div className="h-px w-10" style={{ backgroundColor: 'rgba(255,255,255,0.3)' }} />
             </div>
           </div>
           <div className="rounded-3xl overflow-hidden shadow-xl border border-primary/10 h-[480px]">

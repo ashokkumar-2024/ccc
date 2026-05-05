@@ -11,6 +11,7 @@ import FacilitySection from '@/components/FacilitySection'
 import RoomsSection from '@/components/RoomsSection'
 import CTA from '@/components/CTA'
 import LocationSection from '@/components/LocationSection'
+import SignatureGrounds from '@/components/SignatureGrounds'
 import CTABanner from '@/components/CTABanner'
 import Footer from '@/components/Footer'
 
@@ -22,11 +23,12 @@ export default function Home() {
       <Canvas />
       <ValuesSection />
       <ServicesGrid />
+      <RoomsSection />
       <Gallery />
       <VideoGrid />
-      <RoomsSection />
       <CTA />
       <LocationSection />
+      <SignatureGrounds />
       <CTABanner />
       <Footer />
     </main>

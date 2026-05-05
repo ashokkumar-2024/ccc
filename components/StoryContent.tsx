@@ -21,7 +21,7 @@ export default function StoryContent() {
   return (
     <div>
       {/* Section 2 — Every Moment Is An Experience */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             {/* Image */}

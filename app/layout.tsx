@@ -16,25 +16,13 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'Chaitanya Convention Centre | Celebrate in Style',
+  description: 'Chaitanya Convention Centre — a premium event venue in the heart of Rajajinagar, Bengaluru. Perfect for weddings, receptions, corporate events, and more.',
   icons: {
     icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
+      { url: '/CCC/cropped-Logo-CCC.png', type: 'image/png' },
     ],
-    apple: '/apple-icon.png',
+    apple: '/CCC/cropped-Logo-CCC.png',
   },
 }
 
