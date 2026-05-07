@@ -136,7 +136,6 @@ export default function Footer() {
       <div className="border-t" style={{ borderColor: '#FAF8F315' }}>
         <div className="container mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-2">
           <p className="text-xs" style={{ color: '#FAF8F350' }}>© 2024 Chaitanya Convention Centre. All rights reserved.</p>
-          <p className="text-xs" style={{ color: '#FAF8F350' }}>Designed with ✤ in Bengaluru</p>
         </div>
       </div>
     </footer>

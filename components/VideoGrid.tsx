@@ -22,9 +22,9 @@ export default function VideoGrid() {
         </p>
       </div>
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {videos.map((src, i) => (
-            <div key={i} className="rounded-xl overflow-hidden" style={{ height: '500px' }}>
+            <div key={i} className="rounded-xl overflow-hidden w-full" style={{ height: 'clamp(240px, 50vw, 500px)' }}>
               <video
                 src={src}
                 autoPlay
